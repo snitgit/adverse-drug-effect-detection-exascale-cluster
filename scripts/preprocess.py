@@ -44,6 +44,6 @@ if __name__ == "__main__":
     test_ds = test_ds.map(tokenize, batched=True, batch_size=len(test_ds))
 
     # upload data to S3
-    train_ds.save_to_disk('/opt/ml/processing/training/')
-    val_ds.save_to_disk('/opt/ml/processing/validation/')
-    test_ds.save_to_disk('/opt/ml/processing/test/')
+    train_ds.save_to_disk('./training/')
+    val_ds.save_to_disk('./validation/')
+    test_ds.save_to_disk('./test/')
